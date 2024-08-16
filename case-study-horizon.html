@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Horizon - Reimagining Claude AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Raleway', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            font-size: 14px; /* Slightly increase the base font size */
+        }
+        header {
+            background-color: #fff;
+            padding: 20px 0; /* Increase padding for more space */
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        header a {
+            color: #333;
+            text-decoration: none;
+            font-size: 1.3rem;
+            margin: 0 15px; /* Increase margin between links */
+            transition: color 0.3s;
+        }
+        header a:hover {
+            color: #00bcd4;
+        }
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 0; /* Add padding to create space around the main content */
+        }
+        .container {
+            max-width: 1000px; /* Increase max-width for a wider layout */
+            padding: 25px; /* Increase padding inside the container */
+            background-color: white;
+            box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+            margin: 30px auto; /* Add more space around the container */
+        }
+        h1 {
+            font-size: 2.2rem; /* Increase font size slightly */
+            text-align: center;
+            color: #00bcd4;
+            margin-bottom: 25px; /* Add margin below heading */
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px; /* Increase padding inside cards */
+            margin-bottom: 25px; /* Add more space between cards */
+            box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+        }
+        .card h2 {
+            color: #00bcd4;
+            font-size: 1.8rem; /* Increase font size slightly */
+            margin-bottom: 15px; /* Add space below the heading */
+        }
+        .card p {
+            font-size: 1.3rem; /* Keep paragraph font size consistent */
+            margin-bottom: 15px; /* Add space between paragraphs */
+        }
+        .card ul, .card ol {
+            font-size: 1.3rem;
+            margin-bottom: 15px; /* Add space below lists */
+        }
+        .highlight {
+            background-color: #e6f7f9;
+            border-left: 4px solid #00bcd4;
+            padding: 15px; /* Increase padding */
+            margin: 25px 0; /* Add space above and below */
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px; /* Increase gap between skill tags */
+            margin-top: 25px; /* Add margin above skill tags */
+        }
+        .skill-tag {
+            background-color: #00bcd4;
+            color: white;
+            padding: 6px 12px; /* Increase padding for more space inside tags */
+            border-radius: 20px;
+            font-size: 0.85rem; /* Adjust font size for readability */
+        }
+        .design-showcase {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Increased minimum width */
+    gap: 30px; /* Increased gap for more space between items */
+    margin-top: 40px;
+}
+
+.design-item {
+    background-color: #fff;
+    border-radius: 12px; /* Slightly increased border radius */
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Enhanced shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    padding: 20px; /* Increased padding */
+}
+
+.design-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.design-item .image-container {
+    display: flex;
+    flex-direction: column; /* Changed to column for vertical stacking */
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Increased gap between images */
+    margin-bottom: 20px; /* Added space below images */
+}
+
+.design-item img {
+    width: 100%; /* Full width of container */
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px; /* Soft corners for images */
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1); /* Subtle shadow for images */
+    transition: transform 0.3s ease;
+}
+
+.design-item:hover img {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.design-item .description {
+    padding: 15px 0; /* Removed horizontal padding, kept vertical */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.design-item h3 {
+    color: #00bcd4;
+    margin-bottom: 15px;
+    font-size: 1.4rem; /* Increased font size */
+}
+
+.design-item p {
+    font-size: 1rem; /* Adjusted for better readability */
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .design-showcase {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+}
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            .card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#contact">Contact</a>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>Project Horizon: Reimagining Claude AI</h1>
+
+            <div class="card">
+                <h2>The Promise and the Reality</h2>
+                <p>
+                    When Claude AI burst onto the scene with its impressive 100,000-token context length, it promised to revolutionize AI interactions. Compared to ChatGPT's 4,000-token limit, Claude seemed poised to be a game-changer. As an early adopter and AI enthusiast, I was thrilled by the possibilities.
+                </p>
+                <p>
+                    However, as I delved deeper into using Claude, I quickly realized that impressive specifications on paper don't always translate to a great user experience. Despite its vast potential, Claude's conversations often fell short of expectations, revealing a significant gap between its technical capabilities and practical usability.
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>Identifying the Challenges</h2>
+                <p>
+                    The most glaring issue was the abrupt cutoffs in conversations. I'd initiate an engaging discussion, only to have it terminate unexpectedly after just a few exchanges. This forced me to constantly start new conversation threads, disrupting the natural flow of dialogue and making the entire experience feel disjointed and frustrating.
+                </p>
+                <p>
+                    Adding to this frustration was the daily limit on prompts - typically capped at seven before being locked out for hours. While I understand the need for a sustainable business model, this approach felt counterproductive. As a free user exploring the platform, I needed to see its value before considering an upgrade. Instead, I found myself more annoyed than impressed.
+                </p>
+            </div>
+
+            <div class="highlight">
+                <p>
+                    "In the rapidly evolving world of AI, having powerful technology isn't enough. Success isn't just about what the AI can do; it's about how it feels to use it. Claude AI has the potential to be a market leader, but it needs to focus on making the user experience as impressive as its technical capabilities."
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>Project Horizon: A Vision for Improvement</h2>
+                <p>
+                    Recognizing both Claude's immense potential and its current limitations, I initiated Project Horizon. This side project is my attempt to reimagine how Claude could enhance its user experience. It's not just about fixing what's broken; it's about rethinking the entire approach to AI interaction.
+                </p>
+                <p>
+                    Project Horizon focuses on several key areas:
+                </p>
+                <ul>
+                    <li>Improving conversation flow and continuity</li>
+                    <li>Redesigning the freemium model to encourage engagement</li>
+                    <li>Simplifying the user interface for intuitive navigation</li>
+                    <li>Enhancing features like conversation management</li>
+                </ul>
+                <p>
+                    As Claude's AI capabilities continue to grow, the experience of using it should evolve in tandem. The ultimate goal is to create a tool that people not only find useful but genuinely enjoy using.
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>Design Process</h2>
+                <p>The development of Project Horizon followed a comprehensive design process:</p>
+                <ol>
+                    <li><strong>Empathize:</strong> We began by understanding the needs and frustrations of Claude AI users through extensive user interviews and surveys.</li>
+                    <li><strong>Research and Brainstorming:</strong> We analyzed existing AI platforms, identifying their strengths and weaknesses. This led to brainstorming sessions where we generated innovative ideas to address user pain points.</li>
+                    <li><strong>Wireframing:</strong> We created low-fidelity wireframes to map out the user journey and core functionalities of the reimagined Claude AI interface.</li>
+                    <li><strong>Design:</strong> High-fidelity designs were developed, focusing on creating a sleek, intuitive interface that prioritizes user experience and seamless AI interaction.</li>
+                    <li><strong>Testing:</strong> We conducted rigorous user testing to refine our designs and ensure they met user needs and expectations.</li>
+                </ol>
+                <p>Throughout this process, we maintained a commitment to consistency in design and natural user flow, ensuring that each feature seamlessly integrates into the overall Claude AI experience.</p>
+            </div>
+
+            <div class="card">
+                <h2>Design Showcase</h2>
+                <p>Below are some key design elements of Project Horizon, showcasing how we've reimagined the Claude AI experience:</p>
+                
+                <div class="design-showcase">
+                    <div class="design-item">
+                        <div class="image-container">
+                            <img src="before-home.png" alt="Claude AI Original Home Screen">
+                            <img src="Redesign-home.png" alt="Project Horizon Home Screen">
+                        </div>
+                        <div class="description">
+                            <h3>Home Screen</h3>
+                            <p>We redesigned the home screen to provide a cleaner, more intuitive interface. The new design features a persistent sidebar for easy navigation and a more visually appealing conversation starter. The top one was original design the below one was the redesign you can tell the difference</p>
+                        </div>
+                    </div>
+                    
+                    <div class="design-item">
+                        <div class="image-container">
+                            <img src="conversation-before.png" alt="Claude AI Original Conversation">
+                            <img src="conversation-after.png" alt="Project Horizon Conversation">
+                        </div>
+                        <div class="description">
+                            <h3>Conversation Flow</h3>
+                            <p>We improved the conversation interface to allow for smoother, uninterrupted dialogues. The new design includes visual cues for context length and introduces a 'extend conversation' feature to prevent abrupt cutoffs.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="design-item">
+                        <div class="image-container">
+                            <img src="Conversation-mg-before.png" alt="Claude AI Original Conversation Management">
+                            <img src="Conversation-mg-after.png" alt="Project Horizon Conversation Management">
+                        </div>
+                        <div class="description">
+                            <h3>Conversation Management</h3>
+                            <p>We simplified the process of managing conversations. The new interface allows for easy deletion, renaming, favouriting and organization of conversations directly from the sidebar.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="design-item">
+                        <div class="image-container">
+                            <img src="settings-before.png" alt="Claude AI Original Settings Interface">
+                            <img src="settings-after.png" alt="Project Horizon Improved Settings Interface">
+                        </div>
+                        <div class="description">
+                            <h3>Streamlined Settings Management</h3>
+                            <p>We revamped the settings interface to make it more intuitive and user-friendly. The new design features a cleaner layout, grouped settings for easier navigation, and quick-access toggles for frequently adjusted options. This redesign allows users to manage their preferences and account details and also managing their data with greater ease and efficiency.</p>
+                        </div>
+                    </div>
+                    <div class="highlight">
+                        <p>
+                            "For converting users to paying customers, Claude should ditch the frustrating daily limits and try a different approach. Give everyone access to a solid, capable AI model with no restrictions. Let them really experience what Claude can do. Then, offer even more advanced models and features to paying users. If the free version is already impressive, people will naturally want to upgrade to see what the premium version can do. It's like giving someone a taste of great coffee - they'll likely come back for the premium blend. This way, Claude can grow its user base and boost conversions without leaving a bad taste in anyone's mouth."
+                        </p>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="card">
+                <h2>The Race for AI Dominance</h2>
+                <p>
+                    Claude is rapidly catching up in the AI race. In some areas, particularly coding, it's already demonstrating superiority over ChatGPT. This progress makes it crucial for Claude to focus on improving its user experience now, while there's still an opportunity to lead the market.
+                </p>
+                <p>
+                    In the fast-paced world of AI, having powerful technology isn't enough. Success hinges on how it feels to use the product. Claude has the potential to be a leader, but it needs to make using it as impressive as its underlying capabilities. By doing so, it won't just catch up to competitors like ChatGPT - it could surpass them entirely.
+                </p>
+            </div>
+
+            <div class="skills">
+                <span class="skill-tag">User Experience Design</span>
+                <span class="skill-tag">AI Technology Analysis</span>
+                <span class="skill-tag">Product Strategy</span>
+                <span class="skill-tag">Interface Design</span>
+                <span class="skill-tag">Market Trend Analysis</span>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
